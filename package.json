@@ -1,0 +1,14 @@
+{
+  "name": "sdd-commerce",
+  "version": "1.0.0",
+  "private": true,
+  "description": "SDD Commerce Fullstack Project",
+  "scripts": {
+    "dev": "concurrently -k -n api,web \"npm run dev --prefix backend\" \"npm run dev --prefix frontend\"",
+    "test": "npm run test --prefix backend",
+    "build": "npm run build --prefix frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  }
+}
