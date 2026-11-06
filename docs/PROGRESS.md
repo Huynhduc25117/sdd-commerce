@@ -1,17 +1,19 @@
 # SDD Commerce — Progress
 
 ## Status
-- Current: SDD-00 — Project Master Plan
-- State: Planning baseline drafted; not yet implemented
-- Next: SDD-01 — Project Setup & Architecture
+- Current: SDD-02 — Frontend Development
+- State: Customer/admin demo UI implemented and smoke-tested; authentication and data are not server-backed.
+- Next: SDD-03 — Backend & REST API
 
 ## Completed
 - [x] Define product goal and MVP boundary
 - [x] Define target stack and architecture
 - [x] Define initial API/data model
 - [x] Define module handoff mechanism
+- [x] SDD-01 scaffold: React/Vite/MUI, Express health endpoint and Vite proxy
+- [x] SDD-02 frontend demo: customer browsing/cart/checkout/account and admin UI
 - [ ] Confirm original names of modules SDD-04 through SDD-14
-- [ ] Create GitHub repository and working app (SDD-01)
+- [ ] Complete backend/database/authentication and replace browser-only demo data
 
 ## Decisions
 - D-001: Single product/repository named `sdd-commerce`.
@@ -38,5 +40,11 @@
 
 ## SDD-01 scaffold (2026-11-06)
 - Scaffold generated: frontend React/Vite/MUI, backend Express, health endpoint and test.
-- Status: Pending local npm install, tests, build, browser check, Git commit.
-- Next: [SDD-02] after verification.
+- Verification: `npm test` passed (1 test); `npm run build` passed.
+- Next: SDD-02 frontend development.
+
+## SDD-02 frontend (2026-11-06)
+- Added responsive customer storefront, product search/filter/sort/detail, cart, COD checkout, order history, demo account and admin dashboard.
+- Browser `localStorage` is used only as a frontend demonstration adapter; no product/order/auth/admin endpoint exists yet.
+- Verification: production build and backend health test passed; browser smoke tests covered filtering, empty states, cart persistence/quantity/removal, COD order, account form, admin demo CRUD/status and 404/mobile navigation.
+- Remaining: real admin authorization, MongoDB/API integration, server-authoritative stock/pricing/order totals, automated frontend/E2E tests, and all later DevOps phases.
